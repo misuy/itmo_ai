@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/misuy/ontologies/2023/9/lab"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/misuy/ontologies/2023/9/lab">
+    <Prefix name="" IRI="http://www.semanticweb.org/misuy/ontologies/2023/9/lab/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Assasin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttackType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attr"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Complexity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ForBeginnersHero"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hero"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Magician"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Warrior"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#combine_well"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_attack_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_attr"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_complexity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_assasin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_good_for_beginners"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_magician"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#is_warrior"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agility"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#axe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chaos_knight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#crystal_maiden"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#doom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#drow_ranger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#easy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#intelligence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#leshrac"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#melee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#morphling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#outworld_destroyer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#phantom_assasin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pudge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ranged"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#strength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#void"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#warlock"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Assasin"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#has_attack_type"/>
+                <NamedIndividual IRI="#melee"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#has_attr"/>
+                <NamedIndividual IRI="#agility"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ForBeginnersHero"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#has_attack_type"/>
+                    <NamedIndividual IRI="#ranged"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#has_complexity"/>
+                    <NamedIndividual IRI="#medium"/>
+                </ObjectHasValue>
+            </ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#has_complexity"/>
+                <NamedIndividual IRI="#easy"/>
+            </ObjectHasValue>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Magician"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#has_attack_type"/>
+                <NamedIndividual IRI="#ranged"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#has_attr"/>
+                <NamedIndividual IRI="#intelligence"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Warrior"/>
+        <ObjectIntersectionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#has_attack_type"/>
+                <NamedIndividual IRI="#melee"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#has_attr"/>
+                <NamedIndividual IRI="#strength"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Assasin"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttackType"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attr"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Complexity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ForBeginnersHero"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hero"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Magician"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Warrior"/>
+        <Class IRI="#Hero"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Attr"/>
+        <NamedIndividual IRI="#agility"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#axe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#chaos_knight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#crystal_maiden"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#doom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#drow_ranger"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Complexity"/>
+        <NamedIndividual IRI="#easy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Complexity"/>
+        <NamedIndividual IRI="#hard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attr"/>
+        <NamedIndividual IRI="#intelligence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#leshrac"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Complexity"/>
+        <NamedIndividual IRI="#medium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttackType"/>
+        <NamedIndividual IRI="#melee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#morphling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#outworld_destroyer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#phantom_assasin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#pudge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttackType"/>
+        <NamedIndividual IRI="#ranged"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attr"/>
+        <NamedIndividual IRI="#strength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#void"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hero"/>
+        <NamedIndividual IRI="#warlock"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#axe"/>
+        <NamedIndividual IRI="#melee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#axe"/>
+        <NamedIndividual IRI="#strength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#axe"/>
+        <NamedIndividual IRI="#easy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#chaos_knight"/>
+        <NamedIndividual IRI="#melee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#chaos_knight"/>
+        <NamedIndividual IRI="#strength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#chaos_knight"/>
+        <NamedIndividual IRI="#easy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#crystal_maiden"/>
+        <NamedIndividual IRI="#ranged"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#crystal_maiden"/>
+        <NamedIndividual IRI="#intelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#crystal_maiden"/>
+        <NamedIndividual IRI="#easy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#doom"/>
+        <NamedIndividual IRI="#melee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#doom"/>
+        <NamedIndividual IRI="#strength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#doom"/>
+        <NamedIndividual IRI="#medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#drow_ranger"/>
+        <NamedIndividual IRI="#ranged"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#drow_ranger"/>
+        <NamedIndividual IRI="#agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#drow_ranger"/>
+        <NamedIndividual IRI="#easy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#leshrac"/>
+        <NamedIndividual IRI="#ranged"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#leshrac"/>
+        <NamedIndividual IRI="#intelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#leshrac"/>
+        <NamedIndividual IRI="#medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#morphling"/>
+        <NamedIndividual IRI="#ranged"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#morphling"/>
+        <NamedIndividual IRI="#agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#morphling"/>
+        <NamedIndividual IRI="#hard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#outworld_destroyer"/>
+        <NamedIndividual IRI="#ranged"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#outworld_destroyer"/>
+        <NamedIndividual IRI="#intelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#outworld_destroyer"/>
+        <NamedIndividual IRI="#medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#phantom_assasin"/>
+        <NamedIndividual IRI="#melee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#phantom_assasin"/>
+        <NamedIndividual IRI="#agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#phantom_assasin"/>
+        <NamedIndividual IRI="#easy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#pudge"/>
+        <NamedIndividual IRI="#melee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#pudge"/>
+        <NamedIndividual IRI="#strength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#pudge"/>
+        <NamedIndividual IRI="#medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#void"/>
+        <NamedIndividual IRI="#melee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#void"/>
+        <NamedIndividual IRI="#agility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#void"/>
+        <NamedIndividual IRI="#medium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <NamedIndividual IRI="#warlock"/>
+        <NamedIndividual IRI="#ranged"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_attr"/>
+        <NamedIndividual IRI="#warlock"/>
+        <NamedIndividual IRI="#intelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_complexity"/>
+        <NamedIndividual IRI="#warlock"/>
+        <NamedIndividual IRI="#easy"/>
+    </ObjectPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#has_attack_type"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#has_attr"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#has_complexity"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#combine_well"/>
+    </SymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#combine_well"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_attr"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_complexity"/>
+        <Class IRI="#Hero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_attack_type"/>
+        <Class IRI="#AttackType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_attr"/>
+        <Class IRI="#Attr"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_complexity"/>
+        <Class IRI="#Complexity"/>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_assasin"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_good_for_beginners"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_magician"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#is_warrior"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Assasin"/>
+                <Variable IRI="urn:swrl:var#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Magician"/>
+                <Variable IRI="urn:swrl:var#y"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#combine_well"/>
+                <Variable IRI="urn:swrl:var#x"/>
+                <Variable IRI="urn:swrl:var#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Warrior"/>
+                <Variable IRI="urn:swrl:var#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Assasin"/>
+                <Variable IRI="urn:swrl:var#y"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#combine_well"/>
+                <Variable IRI="urn:swrl:var#x"/>
+                <Variable IRI="urn:swrl:var#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Warrior"/>
+                <Variable IRI="urn:swrl:var#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Magician"/>
+                <Variable IRI="urn:swrl:var#y"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#combine_well"/>
+                <Variable IRI="urn:swrl:var#x"/>
+                <Variable IRI="urn:swrl:var#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
